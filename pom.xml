@@ -1,0 +1,120 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<modelVersion>4.0.0</modelVersion>
+<groupId>HybridFramework</groupId>
+<artifactId>Hybrid</artifactId>
+<version>0.0.1-SNAPSHOT</version>
+
+
+<repositories>
+    <repository>
+      <id>forplay-legacy</id>
+      <url>http://forplay.googlecode.com/svn/mavenrepo</url>
+    </repository>
+  </repositories>
+
+<dependencies>
+
+<!-- Selenium -->
+<dependency>
+<groupId>org.seleniumhq.selenium</groupId>
+<artifactId>selenium-java</artifactId>
+<version>3.141.5</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/dom4j/dom4j -->
+<dependency>
+    <groupId>dom4j</groupId>
+    <artifactId>dom4j</artifactId>
+    <version>1.6.1</version>
+</dependency>
+
+
+ <!-- Extent Report dependency -->
+ <dependency>
+ <groupId>com.relevantcodes</groupId>
+ <artifactId>extentreports</artifactId>
+ <version>2.41.2</version>
+ </dependency> 
+
+<!-- XML Parsing -->
+<dependency>
+<groupId>xml-apis</groupId>
+<artifactId>xml-apis</artifactId>
+<version>2.0.2</version>
+</dependency>
+<dependency>
+<groupId>javax.xml</groupId>
+<artifactId>jaxp-api</artifactId>
+<version>1.4</version>
+</dependency>
+<dependency>
+<groupId>com.sun.jersey</groupId>
+<artifactId>jersey-client</artifactId>
+<version>1.8</version>
+</dependency>
+<dependency>
+<groupId>org.glassfish.jersey.core</groupId>
+<artifactId>jersey-client</artifactId>
+<version>2.22.1</version>
+</dependency>
+<dependency>
+<groupId>org.json</groupId>
+<artifactId>json</artifactId>
+<version>20151123</version>
+</dependency>
+
+<!-- TestNG -->
+<dependency>
+<groupId>org.testng</groupId>
+<artifactId>testng</artifactId>
+<version>6.8</version>
+	<scope>test</scope>
+</dependency>
+
+<!-- OkHttp -->
+<dependency>
+<groupId>com.squareup.okhttp3</groupId>
+<artifactId>okhttp</artifactId>
+<version>3.12.0</version>
+</dependency> 
+
+<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+<dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi</artifactId>
+    <version>3.17</version>
+</dependency>
+ 
+<dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi-ooxml</artifactId>
+    <version>3.17</version>
+</dependency>
+</dependencies>
+
+<build>
+<plugins>
+<plugin>
+<groupId>org.apache.maven.plugins</groupId>
+<artifactId>maven-compiler-plugin</artifactId>
+<version>3.6.1</version>
+<configuration>
+</configuration>
+</plugin>
+
+<plugin>
+<groupId>org.apache.maven.plugins</groupId>
+<artifactId>maven-surefire-plugin</artifactId>
+<version>2.20</version>
+<configuration>
+<suiteXmlFiles>
+<suiteXmlFile>testng.xml</suiteXmlFile>
+<!-- <suiteXmlFile>src/main/resources/testng.xml</suiteXmlFile> -->
+</suiteXmlFiles>
+</configuration>
+</plugin>
+</plugins>
+
+</build>
+
+</project>
